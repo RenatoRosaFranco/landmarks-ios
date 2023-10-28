@@ -4,5 +4,18 @@
 //
 //  Created by Renato Franco on 28/10/23.
 //
+import SwiftUI
 
-import Foundation
+struct RotatedBadgeSymbol: View {
+    let angle: Angle
+    
+    var body: some View {
+        BadgeSymbol()
+            .padding(-60)
+            .rotationEffect(angle, anchor: .bottom)
+    }
+}
+
+#Preview {
+    RotatedBadgeSymbol(angle: Angle(degrees: 5))
+}
